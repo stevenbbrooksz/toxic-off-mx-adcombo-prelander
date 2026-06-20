@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #ffffff;
+}
+
+a {
+  text-decoration: none;
+}
+
+.text-slate-650 {
+  color: #526173;
+}
+
+.hero-readable-overlay {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(23, 33, 38, 0.94) 0%,
+      rgba(23, 33, 38, 0.82) 38%,
+      rgba(23, 33, 38, 0.32) 62%,
+      rgba(23, 33, 38, 0.02) 100%
+    ),
+    linear-gradient(180deg, rgba(40, 114, 71, 0.18), rgba(184, 95, 50, 0.08));
+}
+
+@media (max-width: 767px) {
+  .hero-readable-overlay {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(23, 33, 38, 0.92) 0%,
+        rgba(23, 33, 38, 0.82) 56%,
+        rgba(23, 33, 38, 0.62) 100%
+      ),
+      linear-gradient(180deg, rgba(40, 114, 71, 0.18), rgba(184, 95, 50, 0.1));
+  }
+}
+
+@media (max-width: 380px) {
+  h1 {
+    font-size: 2.25rem !important;
+  }
+}
