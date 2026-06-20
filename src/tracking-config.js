@@ -5,8 +5,8 @@ const delegateClientHints = `<meta http-equiv="delegate-ch" content="sec-ch-ua h
 
 const campaigns = {
   mobile: {
-    campaignId: "",
-    landingId: "",
+    campaignId: "cdcf5172-d8ee-41a5-a0b8-0a3b275ba6b3",
+    landingId: "81380831-3fa8-4132-973b-e57737ef83b2",
   },
 };
 

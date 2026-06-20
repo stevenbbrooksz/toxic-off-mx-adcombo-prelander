@@ -335,6 +335,15 @@ export function App() {
               contacto@zebrabz.com
             </a>
           </p>
+          <p className="mt-3">
+            *This Advertorial is based on fiction and any similarity to real people, places, or
+            events are purely coincidental.
+          </p>
+          <p className="mt-3">
+            *The product advertised is a dietary supplement. Dietary supplements are products
+            intended to supplement the diet. They are not medicines and are not intended to treat,
+            diagnose, mitigate, prevent, or cure diseases.
+          </p>
         </div>
       </footer>
 
