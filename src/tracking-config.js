@@ -6,12 +6,16 @@ const delegateClientHints = `<meta http-equiv="delegate-ch" content="sec-ch-ua h
 const campaigns = {
   mobile: {
     campaignId: "cdcf5172-d8ee-41a5-a0b8-0a3b275ba6b3",
-    landingId: "81380831-3fa8-4132-973b-e57737ef83b2",
+    landingIds: {
+      a: "3e9e6d43-eeb9-408c-98ec-54693ba46a4d",
+      b: "452c1d5b-599c-4c41-a337-1371f7ed56e5",
+      fallback: "81380831-3fa8-4132-973b-e57737ef83b2",
+    },
   },
 };
 
 function hasTracking(config) {
-  return Boolean(config.campaignId && config.landingId);
+  return Boolean(config.campaignId);
 }
 
 function ctaUrl(campaignId, landingId) {
@@ -46,10 +50,11 @@ function bemobCb(params) {
 <noscript><img src="${trackingDomain}/landing/${campaignId}?rule=1&path=1&landing=1" alt=""></noscript>`;
 }
 
-export function getTracking(device = "mobile") {
+export function getTracking(device = "mobile", variant = "a") {
   const config = campaigns[device] || campaigns.mobile;
+  const landingId = config.landingIds?.[variant] || config.landingIds?.fallback;
 
-  if (!hasTracking(config)) {
+  if (!hasTracking(config) || !landingId) {
     return {
       ctaHref: "#confirmacion",
       isPlaceholder: true,
@@ -59,7 +64,7 @@ export function getTracking(device = "mobile") {
   }
 
   return {
-    ctaHref: ctaUrl(config.campaignId, config.landingId),
+    ctaHref: ctaUrl(config.campaignId, landingId),
     isPlaceholder: false,
     metaTag: delegateClientHints,
     lpPixel: landingPixel(config.campaignId),

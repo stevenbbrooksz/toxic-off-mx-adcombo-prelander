@@ -8,7 +8,21 @@ Audience: Spanish-speaking adults in Mexico using mobile devices from in-page pu
 
 Offer context: this page sends users to a body cleanse / digestive wellness COD offer. Do not diagnose parasites, infections, or medical conditions. Do not claim cure, guaranteed results, or urgent danger.
 
-Primary angle: "Revision rapida de bienestar digestivo antes de consultar disponibilidad."
+Primary test: create two mobile-first variants for A/B testing.
+
+Variant A angle: "Revision rapida de bienestar antes de consultar disponibilidad."
+
+- Use a short self-check structure.
+- Ask 3-5 practical, non-diagnostic questions.
+- Make clear this is not a medical test.
+- Filter for users who can review price/conditions and receive a confirmation call.
+
+Variant B angle: "Habitos diarios que conviene revisar antes de comprar."
+
+- Use a calm household / food routine education structure.
+- Mention common Mexico daily-life contexts such as eating outside, shared kitchen routines, and home hygiene.
+- Do not create fear or say users have parasites, infection, or disease.
+- Lead users to check price/conditions only if they can provide a real phone number.
 
 Language: Mexican Spanish.
 
@@ -52,6 +66,8 @@ Compliance constraints:
 Routes:
 
 - `/mobile/`
+- `/mobile/a/`
+- `/mobile/b/`
 - `/`
 
 CTA handling:

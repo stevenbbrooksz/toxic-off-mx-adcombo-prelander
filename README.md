@@ -4,6 +4,13 @@ Static React/Vite prelander for testing AdCombo `37756 Toxic OFF - MX` traffic f
 
 The page is written for a Mexico COD flow and filters for users who can provide a valid phone number and receive a confirmation call. It avoids medical diagnosis, cure claims, fake urgency, and fake scarcity.
 
+## Routes
+
+- `/mobile/` and `/mobile/a/`: self-check angle.
+- `/mobile/b/`: household / food-hygiene routine angle.
+
+Use BeMob landing rotation for real A/B traffic. Do not split live traffic by manually changing the PropellerAds target URL.
+
 ## Local Development
 
 ```bash
